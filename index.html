@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>The CRISPR Index</title>
+<meta name="description" content="The CRISPR Index — browse recent gene-editing research and learn how CRISPR is changing biotechnology.">
+<link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon.png">
+<link rel="apple-touch-icon" href="/assets/apple-touch-icon.png">
+<link rel="shortcut icon" href="/favicon.ico">
+<link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+<header>
+  <div class="wrap">
+    <nav>
+      <a class="brand" href="#home" aria-label="The CRISPR Index home"><img src="/assets/crispr-index-logo.png" alt="The CRISPR Index"></a>
+      <button class="menu" aria-label="Menu" onclick="document.querySelector('.navlinks').classList.toggle('open')">☰</button>
+      <div class="navlinks">
+        <a href="#research">Browse Research</a>
+        <a href="#explorer">CRISPR Explorer</a>
+        <a href="#about">About</a>
+        <a class="nav-pill" href="#research">Open the Index</a>
+      </div>
+    </nav>
+  </div>
+</header>
+
+<main>
+<section class="hero" id="home">
+  <div class="wrap hero-grid">
+    <div class="hero-copy">
+      <div class="label">Gene editing, made easier to explore</div>
+      <h1>The CRISPR Index</h1>
+      <p>A curated platform for exploring recent gene-editing research and understanding how CRISPR technology is changing medicine, biotechnology and the way we think about disease.</p>
+      <div class="actions">
+        <a class="action blue" href="#research">Browse Research</a>
+        <a class="action" href="#explorer">Learn about CRISPR</a>
+      </div>
+    </div>
+    <div class="science-visual">
+      <div class="dna-stage">
+        <div class="helix" id="helix"></div>
+        <div class="cas">Cas9</div>
+        <div class="guide">guide RNA</div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="research" id="research">
+  <div class="wrap">
+    <div class="section-top">
+      <div class="section-id">01 / Browse Research</div>
+      <div class="section-copy">
+        <h2>Read the research.<br>Then make sense of it.</h2>
+        <p>Browse a curated collection of recent papers from across gene editing. Open any paper to read the research overview, work through a student-friendly research guide, then use the AI Tutor when you want a simpler explanation or need help with the background science.</p>
+      </div>
+    </div>
+
+    <div class="library-meta"><span id="paperCount">35 papers</span><span>Each entry includes a research guide, source details and a live AI Tutor.</span></div>
+    <div class="filterbar">
+      <input class="field" id="search" type="search" placeholder="Search title, author, journal or topic">
+      <select class="field" id="year">
+        <option value="">All years</option><option>2020</option><option>2021</option><option>2022</option><option>2023</option><option>2024</option><option>2025</option><option>2026</option>
+      </select>
+      <select class="field" id="technique">
+        <option value="">All techniques</option><option>CRISPR-Cas9</option><option>Base editing</option><option>Prime editing</option><option>CRISPRi</option><option>CRISPRa</option><option>Cas12</option><option>Cas13</option>
+      </select>
+      <select class="field" id="sort">
+        <option value="newest">Newest first</option><option value="oldest">Oldest first</option><option value="alpha">Title A–Z</option>
+      </select>
+    </div>
+
+    <div class="library">
+      <div class="paper-list" id="paperList"></div>
+      <div class="detail" id="detail"></div>
+    </div>
+  </div>
+</section>
+
+<section class="explorer" id="explorer">
+  <div class="wrap">
+    <div class="section-top">
+      <div class="section-id">02 / CRISPR Explorer</div>
+      <div class="section-copy">
+        <h2>Build the basics.<br>Then go deeper.</h2>
+        <p>Start with DNA, guide RNA, Cas9, mutations and gene expression, then explore the wider CRISPR toolbox. Each concept begins simply and adds more detail when you are ready.</p>
+      </div>
+    </div>
+    <div class="explorer-layout">
+      <div class="tech-nav" id="techNav"></div>
+      <div class="tech-content" id="techContent"></div>
+    </div>
+  </div>
+</section>
+
+<section class="about" id="about">
+  <div class="wrap about-shell">
+    <aside class="profile-card">
+      <div class="profile-image">
+        <img src="/assets/daniel-profile.png" alt="Daniel Dominick, creator of The CRISPR Index">
+      </div>
+      <div class="profile-kicker">Student creator</div>
+      <h3>Daniel Dominick</h3>
+      <p>Making complex gene-editing research easier to explore and understand.</p>
+    </aside>
+
+    <div class="about-content">
+      <div class="section-id">03 / About</div>
+      <h2>Created from curiosity about biotechnology.</h2>
+      <p class="about-lead">My name is Daniel Dominick, and I am very interested in biotechnology and the ways gene-editing technology is beginning to change our world.</p>
+      <p>When I first started reading research papers in this field, I found them difficult to understand. Many are written by leading professors and researchers for people who already know the science, so even fascinating ideas can feel inaccessible when you are just beginning to learn.</p>
+      <p>That experience gave me the idea for The CRISPR Index. I wanted to create a platform where people could discover important research, understand the main ideas behind it, and learn how technologies such as CRISPR-Cas9, base editing and prime editing are being used in ways that would have seemed impossible not long ago.</p>
+
+      <div class="mission-card">
+        <h4>Mission</h4>
+        <p>Make important gene-editing research easier to approach, while showing people how biotechnology is revolutionising medicine, science and the way we understand disease.</p>
+      </div>
+
+      <div class="about-signoff">The CRISPR Index · Created by Daniel Dominick</div>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div class="wrap footer-grid">
+    <div class="footer-name">Contact Us</div>
+    <div class="footer-small">Email Address: <a href="mailto:thecrisprindex@gmail.com">thecrisprindex@gmail.com</a></div>
+  </div>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
